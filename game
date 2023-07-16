@@ -1,0 +1,52 @@
+import random
+print("WELCOME TO 😎SIDHARTH😎 ROCK PAPER SCISSORS Game")
+rock = '''
+    _______
+---'   ____)
+      (_____)
+      (_____)
+      (____)
+---.__(___)
+'''
+paper = '''
+    _______
+---'   ____)____
+          ______)
+          _______)
+         _______)
+---.__________)
+'''
+scissors = '''
+    _______
+---'   ____)____
+          ______)
+       __________)
+      (____)
+---.__(___)
+'''
+gameimage=[rock,paper,scissors]
+mode=['Rock',"Paper","Scissors"]
+
+user_choic=int(input("what do you choose 0:rock,1:paper,2:scissor"))
+print(f"user chose{user_choic}")
+print(gameimage[user_choic])
+print(mode[user_choic])
+computer_choice=random.randint(0,2)
+print(gameimage[computer_choice])
+print(f"computer chose {computer_choice}")
+print(mode[computer_choice])
+
+if user_choic>=3:
+    print("you typed a invalid number")
+elif user_choic == 0 and computer_choice == 2:
+    print("User Win")
+elif user_choic == 2 and computer_choice == 0:
+    print("User Lose")
+elif user_choic<computer_choice:
+    print("User Lose")
+elif user_choic>computer_choice:
+    print("User Win")
+elif user_choic==computer_choice:
+    print("Draw")
+elif user_choic>=3:
+    print("you typed a invalid number")
